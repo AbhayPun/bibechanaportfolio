@@ -2,17 +2,14 @@ import React from 'react';
 import CaricatureSculptTheBear from '../Assets/CaricatureSculptTheBearOriginal.webp';
 import CharacterModellingDeadEndParanormalPark from '../Assets/CharacterModellingDeadEndParanormalPark.webp';
 import ModellingKlaus from '../Assets/ModellingKlaus.webp';
-import { useNavigate } from 'react-router-dom';
-import GuyScreamingPage from '../pages/GuyScreamingPage'
-import HandSculptPage from '../pages/HandSculptPage';
-import KlausHousePage from '../pages/KlausHousePage';
-import TheBearPage from '../pages/TheBearPage';
+import Hand from '../Assets/Hand 6.png'
+import GuyScreaming from '../Assets/GuyScreaming.webp'
 import { Link } from "react-router-dom";
 
 const Models = () => {
 
   return (
-    <div className="flex space-x-12 pr-12">
+    <div className="flex flex-wrap ">
       <div className="relative w-full md:w-1/3 group">
       <Link to="/TheBearPage">
         <img 
@@ -51,6 +48,38 @@ const Models = () => {
         </span>
         </Link>
       </div>
+
+      <div className="flex w-full justify-between">
+
+      <div className="relative w-full md:w-1/3 group ">
+      <Link to="HandSculptPage">
+
+        <img 
+          src={Hand} 
+          alt="Hand" 
+          className="w-full h-auto transition-all duration-300 ease-in-out group-hover:brightness-50" 
+        />
+        <span className="font-urbanist text-white-heat font-medium text-lg absolute inset-0 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        Hand
+        </span>
+        </Link>
+      </div>
+
+      <div className="relative w-full md:w-1/3 group ">
+      <Link to="GuyScreamingPage">
+
+        <img 
+          src={GuyScreaming} 
+          alt="Guy Screaming" 
+          className="w-full h-auto transition-all duration-300 ease-in-out group-hover:brightness-50" 
+        />
+        <span className="font-urbanist text-white-heat font-medium text-lg absolute inset-0 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+        Character Sculpt + Re-Topology
+        </span>
+        </Link>
+      </div>
+      </div>
+      
     </div>
   );
 };

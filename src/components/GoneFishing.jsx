@@ -3,7 +3,7 @@ import React from "react";
 const GoneFishing = () => {
   return (
     <div>
-      <div className="flex flex-wrap px-8">
+      <div className="flex flex-wrap px-8 pt-5">
         <div className="w-full md:w-2/3 pr-4"> {/* Added padding-right to separate from text */}
           <div className="relative" style={{ paddingTop: "56.25%" }}>
             <iframe
@@ -19,7 +19,7 @@ const GoneFishing = () => {
         </div>
 
         <div className="w-full md:w-1/3 flex flex-col justify-start"> {/* Ensure the text is aligned at the top */}
-          <span className="font-urbanist text-white-heat font-medium text-lg font-bold">
+          <span className="font-urbanist text-white-heat font-medium text-lg font-extrabold">
             GONE FISHING
           </span>
           <p className="font-urbanist text-white-heat font-medium mt-4">
