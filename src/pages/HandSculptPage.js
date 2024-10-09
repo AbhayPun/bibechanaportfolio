@@ -14,10 +14,10 @@ function GUI({ onPresetChange }) {
     }
   });
 
-  // Pass the selected preset back to the parent component
+
   onPresetChange(preset);
 
-  return null; // GUI doesn't need to render anything visually
+  return null;
 }
 
 
@@ -36,7 +36,7 @@ const HandSculptPage = () => {
                 <directionalLight position={[-10, -10, -5]} intensity={0.5} />
               </>
             )}
-      <group position={[0, -2, 0]}>
+      <group position={[0, -1.8, 0]}>
         <Center top>
           <Model />
         </Center>

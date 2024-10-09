@@ -7,12 +7,12 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/KlausHouse.glb')
+  const { nodes, materials } = useGLTF('BibiModels/KlausHouse.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Ground.geometry} material={materials.Snow} position={[0.435, 0.897, 0.419]} scale={[1.568, 1, 1.182]} />
       <mesh geometry={nodes.Mball003.geometry} material={materials.Snow} position={[1.549, 2.631, 1.052]} scale={0.358} />
-      <mesh geometry={nodes.Plane002.geometry} material={materials['Material.001']} position={[4.147, 4.033, -8.896]} rotation={[Math.PI / 2, 0, 0.298]} scale={[5.829, 3.157, 3.583]} />
+      {/* <mesh geometry={nodes.Plane002.geometry} material={materials['Material.001']} position={[4.147, 4.033, -8.896]} rotation={[Math.PI / 2, 0, 0.298]} scale={[5.829, 3.157, 3.583]} /> */}
       <mesh geometry={nodes.Mball001.geometry} material={materials.Snow} position={[1.549, 2.631, 1.052]} scale={0.358} />
       <mesh geometry={nodes.Cube.geometry} material={materials.raw_plank_wall} position={[0, 3.573, 0]} />
       <mesh geometry={nodes.Cube003.geometry} material={materials.Structure} position={[-0.159, 2.448, 0.968]} scale={[0.03, 0.166, 0.03]} />
@@ -82,4 +82,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/KlausHouse.glb')
+useGLTF.preload('BibiModels/KlausHouse.glb')

@@ -1,9 +1,15 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import ErrorVideo from '../Assets/itsgoingtobeokaybutitsgoingtobedifferentdog.mp4'
 const  NoPage = () => {
     return (
-        <h1>Error 404: Not found</h1>
+        <>
+         <div className="full-screen">
+        <h1 className="font-urbanist uppercase text-9xl  text-white-heat ">404: Page Not found</h1>
+        <video  controls autoPlay loop muted>
+      <source src={ErrorVideo} type="video/mp4"/>
+        </video>
+        </div>
+        </>
     );
 
 }
